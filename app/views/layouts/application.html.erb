@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <title>Tasklist</title>
+    <%# セキュリティ対策用コード %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%# CSS読み込みコード %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# JavaScript読み込みコード %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= render 'layouts/flash_tasks' %>
+      
+      <%# Viewの代入 %>
+      <%= yield %>
+    </div>
   </body>
 </html>
