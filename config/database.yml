@@ -49,7 +49,7 @@ test:
 #
 production:
   adapter: postgresql
-  ensoding: unicode
+  encoding: unicode
   pool: 5
   database: tasklist_production
   username: tasklist
